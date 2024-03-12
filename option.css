@@ -1,0 +1,83 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+/* alpha transparency */
+/* Make elements partially visible with alpha transparency. */  
+  header, footer {
+    padding: 20px;
+    text-align: center;
+    background-color: hsla(0, 64%, 91%, 0.8);
+  }
+ 
+  main {
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px;
+    align-items: center;
+  }
+/* CSS attribute and/or substring matching attribute selectors */ 
+/* Pick specific elements based on their link. */
+  .navigation a[href*="apple"] {
+    color: rgb(168, 34, 34);
+  }
+  
+  .navigation a[href*="samsung"] {
+    color: rgb(45, 34, 168);
+  }
+  
+  .navigation a[href*="google"] {
+    color: rgb(20, 110, 44);
+  }
+ 
+/* text and box shadows */
+/* Make text and boxes pop with customizable shadows */
+  .navigation a {
+    text-decoration: none;
+    color: #000;
+    text-shadow: 1px 1px 1px rgb(230, 135, 165);
+    box-shadow: 0px 2px 5px rgba(255, 0, 0, 0.627);
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 30px 0;
+  }
+/* CSS Filter */  
+/* contrast to elements with filters */
+  .navigation a:hover {
+    background-color: #a39090;
+    filter: contrast(1.5);
+  }
+  
+  footer p {
+    font-size: smaller;
+  }
+  
+/* use media-query */
+/* Change the website's style based on device it's viewed on (phone, tablet) */
+/*linear gradients*/
+/* Create gradients for fancy color transitions between elements. */
+@media (max-width: 767px) {
+    main {
+
+        background-image: url("bg.jpg");
+        background: linear-gradient( to bottom, hsla(0, 64%, 91%, 0.8), #e0e0e0 );
+    }
+  }
+    
+    @media (min-width: 768px) {
+        main {
+
+        background-image: url("bg.jpg");
+        background: linear-gradient( to top,hsla(0, 64%, 91%, 0.8), #e0e0e0 );
+        }
+    }
